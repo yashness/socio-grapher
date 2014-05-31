@@ -1,0 +1,25 @@
+
+
+
+<p> Hello from Start page..!!</p>
+<% if not @friends.nil?%>
+	<% @friends.each do |f| %>
+		<%= f["name"]%></br>
+	<%end%>
+<%end%>
+
+<% if not @profile.nil?%>
+	<%= @profile%></br></br>
+
+<%end%>
+</br>
+<%if not @feeds.nil?%>
+	
+	<% @feeds.each do |feed| %>
+		<% if not feed['picture'].nil?%>
+		<%= image_tag(feed['picture'])%>
+		<% end %>
+	<% end %>
+
+<%end%>
+
